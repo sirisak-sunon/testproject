@@ -1,0 +1,22 @@
+using System;
+
+namespace testcs
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] number = new int[5];
+            int numbermax = 0;
+            for(int i=0; i<4; i++){
+                Console.Write("Please input a number (" + ++i +") : ");
+                --i;
+                number[i] = Int32.Parse(Console.ReadLine());
+                if(number[i]>numbermax){
+                    numbermax = number[i];
+                }
+            }
+            Console.WriteLine("The maximum number is : " + numbermax);
+        }
+    }
+}

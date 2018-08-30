@@ -1,0 +1,33 @@
+using System;
+
+namespace testcs
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+              Console.WriteLine("Here a cute cat");
+          do{
+              
+              Console.WriteLine("Do you want to see a dog? ");
+              string doc = Console.ReadLine();
+              if(doc == "yes"){
+                  Console.WriteLine("Here an awesome dog");
+              }
+              else{
+                  Console.WriteLine("Good bye :)");
+                  break;
+              }
+              Console.WriteLine("Do you want to see a cat?");
+              string cat = Console.ReadLine();
+              if(cat == "yes"){
+                  Console.WriteLine("Here a cute cat");
+              }
+              else{
+                  Console.WriteLine("Good bye :)");
+                  break;
+              }
+          }while(true);
+        }
+    }
+}

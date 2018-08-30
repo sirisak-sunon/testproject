@@ -1,0 +1,35 @@
+using System;
+
+namespace testcs
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string restart = "Y";
+            while(restart == "Y" || restart=="y"){
+                int i =1;
+                int first_number = 0;
+                int second_number = 0;
+                int total = 0;
+                Console.Clear();
+                Console.WriteLine("How many rounds? >> ");
+                first_number = Int32.Parse(Console.ReadLine());
+                while(i<=first_number){
+                    Console.Write("Please enter your number : ");
+                    second_number = Int32.Parse(Console.ReadLine());
+                    total = total + second_number;
+                    i++;
+                }
+                Console.Write("Your answer is : " + total);
+                Console.Write("Do you want to continue ? (yes/no) ");
+                restart = Console.ReadLine();
+                if(restart=="no"||restart=="No"){
+                    Console.Write("Good bye :) ");
+                    break;
+                }
+            }
+            
+        }
+    }
+}

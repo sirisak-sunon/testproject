@@ -1,0 +1,15 @@
+using System;
+
+namespace testcs
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+          do{
+              Console.WriteLine("Submon a monster!! ");
+              break;
+          }while(true);
+        }
+    }
+}

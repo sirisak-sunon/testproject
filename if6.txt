@@ -1,0 +1,45 @@
+using System;
+
+namespace testcs
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           string water = "";
+           string shield = "";
+           string sword = "";
+           Console.WriteLine("Do you have a holy water? ");
+           water = Console.ReadLine();
+           Console.WriteLine("Do you have a holy shield? ");
+           shield = Console.ReadLine();
+           Console.WriteLine("Do you have a holy sword? ");
+           sword = Console.ReadLine();
+
+           if(water=="yes" && shield=="yes" && sword=="yes"){
+               Console.WriteLine("The devil die");
+           }
+           else if(water=="yes" && shield=="yes" && sword=="no"){
+               Console.WriteLine("Hero bleeding");
+           }
+           else if(water=="yes" && shield=="no" && sword=="yes"){
+               Console.WriteLine("Hero die, The devil bleeding");
+           }
+           else if(water=="yes" && shield=="no" && sword=="no"){
+               Console.WriteLine("Hero die");
+           }
+           else if(water=="no" && shield=="yes" && sword=="yes"){
+               Console.WriteLine("Hero turn to be a werewolf");
+           }
+           else if(water=="no" && shield=="yes" && sword=="no"){
+               Console.WriteLine("Hero turn to be a zombie");
+           }
+           else if(water=="no" && shield=="no" && sword=="yes"){
+               Console.WriteLine("Hero turn to be a bat");
+           }
+           else if(water=="no" && shield=="no" && sword=="no"){
+               Console.WriteLine("Hero turn to be a worm");
+           }
+        }
+    }
+}

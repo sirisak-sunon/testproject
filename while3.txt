@@ -1,0 +1,25 @@
+using System;
+
+namespace testcs
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i=1;
+            int number = 0;
+            
+            Console.WriteLine("How many floors ? ");
+            number = Int32.Parse(Console.ReadLine());
+            while(i<=number){
+                int j=0;
+                while(j<i){
+                    Console.Write("*");
+                    j++;   
+                }
+                Console.WriteLine();
+                i++;
+            }
+        }
+    }
+}

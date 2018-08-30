@@ -1,0 +1,46 @@
+using System;
+
+namespace testcs
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num = 0;
+            double total = 0;
+            Console.WriteLine(" 1.Circle \n 2.Triangle \n 3.Square");
+            Console.WriteLine("Please select a number for calculation mode");
+            num = Int32.Parse(Console.ReadLine());
+            if(num!=1 && num!=2 && num!=3){
+                Console.WriteLine("Please select number 1~3 only! ");
+                Console.WriteLine("-------------------------------");
+            }
+            else if(num == 1){
+                Console.Write("Please insert radius: ");
+                double radius = double.Parse(Console.ReadLine());
+                total = (3.141*(Math.Pow(radius,2)));
+                Console.Write("The circle area is: "+ total );
+                Console.WriteLine("-------------------------------");
+                
+            }
+            else if(num == 2){
+                Console.Write("Please insert base: ");
+                double base_number = double.Parse(Console.ReadLine());
+                Console.Write("Please insert height: ");
+                double height = double.Parse(Console.ReadLine());
+                total = (0.5 * base_number * height);
+                Console.WriteLine("The triangle area is: "+ total );
+                Console.WriteLine("-------------------------------");
+            }
+            else if(num == 3){
+                Console.Write("Please insert width: ");
+                double width = double.Parse(Console.ReadLine());
+                Console.Write("Please insert height: ");
+                double height = double.Parse(Console.ReadLine());
+                total = (width * height);
+                Console.WriteLine("The Square area is: "+ total );
+                Console.WriteLine("-------------------------------");
+            }
+        }
+    }
+}

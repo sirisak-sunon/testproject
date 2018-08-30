@@ -1,0 +1,29 @@
+using System;
+
+namespace testcs
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string rose = "";
+            string doll = "";
+            Console.WriteLine("Did you ever give him/her a rose? ");
+            rose = Console.ReadLine();
+            Console.WriteLine("Did you ever give him/her a doll? ");
+            doll = Console.ReadLine();
+            if(rose=="yes" && doll!="yes"){
+                Console.WriteLine("He/She like you");
+            }
+            else if(doll=="yes" && rose!="yes"){
+                Console.WriteLine("He/She interested in you");
+            }
+            else if(doll=="yes" && rose=="yes"){
+                Console.WriteLine("He/She love you :)");
+            }
+            else if(doll!="yes" && rose!="yes"){
+                Console.WriteLine("He/She don't care about you");
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+using System;
+
+namespace testcs
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int orange = 15;
+            int lemon = 25;
+            int money = 0;
+            int number = 0;
+            int total =0;
+            string selection = "";
+
+            Console.WriteLine("How many money do you have? ");
+            money = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Which one do you want to buy Orange or Lemon? ");
+            selection = Console.ReadLine();
+            Console.WriteLine("How much? ");
+            number = Int32.Parse(Console.ReadLine());
+            if(selection=="Orange" || selection=="orange"){
+                total = (money - (orange * number));
+            }
+            else if(selection=="Lemon" || selection=="lemon"){
+                total = (money - (lemon * number));
+            }
+            if(total<=0){
+                Console.WriteLine("You have not enough money!");
+                Console.Write("Here your change " + money);
+            }
+            else if(total>0){
+                Console.WriteLine("Here your change " + total);
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+using System;
+
+namespace testcs
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           double first_operand = 0;
+           double second_operand = 0;
+           double total = 0; 
+           string operation ="";
+           Console.WriteLine("Please input first operand ");
+           first_operand = double.Parse(Console.ReadLine());
+
+           Console.WriteLine("Please input operation ");
+           operation = Console.ReadLine();
+
+           Console.WriteLine("Please input second operand ");
+           second_operand = double.Parse(Console.ReadLine());
+           
+           if(operation =="+"){
+              total = first_operand + second_operand;
+           }
+           else if(operation =="-"){
+               total = first_operand - second_operand;
+           }
+           else if(operation =="*"){
+               total = first_operand * second_operand;
+           }
+           else if(operation =="/"){
+               total = first_operand / second_operand;
+           }
+           Console.WriteLine("The result is: "+total);
+        }
+    }
+}

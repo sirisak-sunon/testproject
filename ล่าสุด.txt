@@ -1,0 +1,42 @@
+using System;
+
+namespace testcs
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int number = 0;
+            int num=0;
+            int total = 0;
+            int mod = 0;
+
+            Console.Write("Number of digits to enter : ");
+            number = Int32.Parse(Console.ReadLine());
+            int[] n = new int[number];
+            for(int i=0; i<number; i++){
+                Console.Write("Please input a number ");
+                n[i] = Int32.Parse(Console.ReadLine());
+                num++;
+                if(num == number){
+                    Console.WriteLine("--------------------------------");
+                    for(int j=0; j<number; j++){
+                        Console.Write(n[j]); 
+                    }
+                }
+            }
+            total = num/2; 
+            mod = num%2;   
+            Console.WriteLine();
+            Console.WriteLine("--------------------------------");
+            num--;
+            for(int i=0; i<=num; num-- ){
+                if(num != total && mod==1){
+                    n[num] = n[num] + n[total];
+                }
+                Console.Write(n[num] + " ");
+            }
+        }
+    }
+}
+

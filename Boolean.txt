@@ -1,0 +1,39 @@
+using System;
+
+namespace testcs
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string name = "john";
+            int age = 19;
+            bool isMale = true;
+
+            // ข้อ1 ต้องเป็นผู้ชาย้ท่านั้น
+            if(isMale==true){
+                Console.WriteLine("เป็นผู้ชาย");
+            }
+
+            // ข้อ2 ต้องเป็นผู้หญิงเท่านั้น
+            if(isMale==false){
+                Console.WriteLine("เป็นผู้หญิง");
+            }
+
+            // ข้อ3 อายุจะต้องมากกว่า 18 ปีขึ้นไป
+            if(age>18){
+                Console.WriteLine("อายุมากกว่า 18 ปีแล้ว");
+            }
+
+            // ข้อ4 อายุจะต้องมากกว่า 18 ปีขึ้นไป และต้องเป็นผู้หญิงเท่านั้น
+            if(age>18 && isMale==false){
+                Console.WriteLine("อายุเกิน 18 และเป็นผู้หญิง");
+            }
+
+            // ข้อ5 อายุจะต้องมากกว่า 18 ปีขึ้นไป หรือ เป็นผู้ชายก็ได้ แต่ต้องมีชื่อว่า John เท่านั้น
+            if(age>18 || isMale==true && name=="john"){
+                Console.WriteLine("อายุมากว่า 18ปี เป็นเพศใดก็ได้ และมีชื่อว่า john");
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+using System;
+
+namespace testcs
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("\n 1.ค้อน \n 2.กรรไกร \n 3.กระดาษ");
+            Console.WriteLine();
+            Console.Write("ตาของผู้เล่นที่ 1 >>");
+            int player1 = Int32.Parse(Console.ReadLine());
+            Console.WriteLine();
+            Console.Write("ตาของผู้เล่นที่ 2 >>");
+            int player2 = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("----------------------------------------");
+            Console.WriteLine();
+
+
+            if(player1 ==1 && player2==2 || player1 ==2 && player2==3 || player1 ==3 && player2==1){
+                Console.WriteLine("ผู้เล่นที่ 1 ชนะ");
+            }
+            else if(player1 ==1 && player2==3 || player1 ==2 && player2==1 || player1 ==3 && player2==2){
+                Console.WriteLine("ผู้เล่นที่ 2 ชนะ");
+            }
+            else if(player1 == player2){
+                Console.WriteLine("เสมอกัน");
+            }
+        }
+    }
+}
+
